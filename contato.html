@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Meu Portfólio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Entre em Contato</h1>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 3rem;">Tem um projeto em mente ou quer bater um papo sobre tecnologia? Ficarei feliz em conversar com você!</p>
+        
+        <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="assunto">Assunto *</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="trabalho">Oportunidade de Trabalho</option>
+                    <option value="consultoria">Consultoria</option>
+                    <option value="parceria">Parceria</option>
+                    <option value="duvida">Dúvida Técnica</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Conte-me mais sobre seu projeto ou como posso ajudá-lo..."></textarea>
+            </div>
+            
+            
+            
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+        
+        <section style="margin-top: 4rem;">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <h3>📧 E-mail</h3>
+                        <p>charles.carpes@gmail.com</p>
+                        <p>Melhor forma de contato</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <h3>💼 LinkedIn</h3>
+                        <p>linkedin.com/in/charles-carpes-82782566/</p>
+                        <p>Vamos nos conectar profissionalmente</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <h3>📱 Telegram</h3>
+                        <p>@CharlesQCarpes</p>
+                        <p>Para conversas mais diretas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Script simples para validação do formulário
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            if (!nome || !email || !assunto || !mensagem) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Simular envio do formulário
+            alert('Este site não permite o envio do formulário! Entre em contato comigo pelos canais abaixo.');
+            
+            // Limpar formulário
+            this.reset();
+        });
+    </script>
+</body>
+</html>
